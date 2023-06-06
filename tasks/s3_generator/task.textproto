@@ -1,0 +1,26 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "s3_generator"
+name: "s3 generator"
+python_script: {
+  source_uuid: "source"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "source"
+      source_name: "script.py"
+    }
+  }
+}
+outputs: {
+  id: "a"
+  name: "output"
+  data_kind: S3_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "wookeshi/boto3:alpine"
+    command: "{{ script_path }}/entrypoint.sh {{ script_path }}"
+  }
+}

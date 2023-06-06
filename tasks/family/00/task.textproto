@@ -1,0 +1,28 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "family_00"
+name: "family - parent task"
+version: "1.0"
+state: TASK_STATE_DEPRECATED
+python_script: {
+  source_uuid: "generator.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "generator.py"
+      source_name: "script.py"
+    }
+  }
+}
+outputs: {
+  id: "aa"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+}

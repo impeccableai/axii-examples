@@ -1,0 +1,27 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "random_python"
+name: "Random Python"
+nondeterministic: true
+python_script: {
+  source_uuid: "source.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "source.py"
+      source_name: "script.py"
+    }
+  }
+}
+outputs: {
+  id: "a"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+}

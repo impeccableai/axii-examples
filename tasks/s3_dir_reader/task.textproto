@@ -1,0 +1,27 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "s3_dir_reader"
+name: "s3 dir reader"
+python_script: {
+  source_uuid: "source"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "source"
+      source_name: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "a"
+  name: "input"
+  data_hint: DATA_HINT_NONE
+  data_kind: S3_DIR
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "wookeshi/boto3:alpine"
+    command: "{{ script_path }}/entrypoint.sh {{ script_path }}"
+  }
+}

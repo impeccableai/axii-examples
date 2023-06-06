@@ -1,0 +1,94 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "pokemon_train_cnn"
+name: "Pokemon model CNN training/inference [PyTorch]"
+version: "1.1.0"
+python_script: <
+  source_uuid: "train.py"
+  source: <
+    raw: <
+      source_uuid: "train.py"
+    >
+  >
+>
+inputs: <
+  id: "0"
+  name: "pokemon_stats_file"
+  data_hint: TEXT
+  data_kind: FS_FILE
+>
+inputs: <
+  id: "1"
+  name: "pokemon_csv"
+  data_hint: STRUCTURED_TEXT
+  data_kind: FS_FILE
+>
+inputs: <
+  id: "2"
+  name: "dataset"
+  data_hint: IMAGE
+  data_kind: FS_DIR
+>
+inputs: <
+  id: "3"
+  name: "saved_model"
+  data_hint: BINARY
+  data_kind: FS_FILE
+  optional: true
+>
+outputs: <
+  id: "0"
+  name: "trained_model"
+  data_hint: BINARY
+  data_kind: FS_FILE
+>
+description: "Runs training/inference on Pokemon Dataset.\nusage: train.py [-h] [--mode MODE] --pokemon_stats_file POKEMON_STATS_FILE --pokemon_csv\n                POKEMON_CSV --dataset DATASET [--saved_model SAVED_MODEL]\n                [--trained_model TRAINED_MODEL] [--epochs EPOCHS] [--batch_size BATCH_SIZE]\n                [--learning_rate LEARNING_RATE] [--random_seed RANDOM_SEED]\n                [--num_classes NUM_CLASSES]\n\noptions:\n  -h, --help            show this help message and exit\n  --mode MODE           mode: training/inference\n  --pokemon_stats_file POKEMON_STATS_FILE\n                        file with precomputed pokemons mean and std\n  --pokemon_csv POKEMON_CSV\n                        file with image->class mappings\n  --dataset DATASET     dir with images\n  --saved_model SAVED_MODEL\n                        previously saved model to load\n  --trained_model TRAINED_MODEL\n                        trained model output\n  --epochs EPOCHS       number of epochs to train\n  --batch_size BATCH_SIZE\n                        the batch size\n  --learning_rate LEARNING_RATE\n                        the learning rate\n  --random_seed RANDOM_SEED\n                        random seed\n  --num_classes NUM_CLASSES\n                        number of classes"
+default_runtime: <
+  new_parameters: <
+    key: "batch_size"
+    value: <
+      optional: false
+      value: "4"
+    >
+  >
+  new_parameters: <
+    key: "epochs"
+    value: <
+      optional: false
+      value: "10"
+    >
+  >
+  new_parameters: <
+    key: "learning_rate"
+    value: <
+      optional: false
+      value: "0.001"
+    >
+  >
+  new_parameters: <
+    key: "mode"
+    value: <
+      optional: false
+      value: "training"
+    >
+  >
+  new_parameters: <
+    key: "num_classes"
+    value: <
+      optional: false
+      value: "-1"
+    >
+  >
+  new_parameters: <
+    key: "random_seed"
+    value: <
+      optional: false
+      value: "42"
+    >
+  >
+  python_script_runtime: <
+    docker_image: "impeccableai/pytorch:1.11.0"
+    command: "python  {{ script_path }}"
+  >
+>

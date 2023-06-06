@@ -1,0 +1,56 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "classification_metrics"
+name: "Classification Metrics"
+description: "Compute metrics for classification task [-h] -p PREDICTED_COLUMN -y Y_COLUMN [-d DELIMITER] dataset metrics_csv\n\npositional arguments:\n\tdataset\tinput CSV\n\tmetrics_csv\toutput CSV\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t-p PREDICTED_COLUMN,\t--predicted_column PREDICTED_COLUMN predicted column\n\t-y Y_COLUMN,\t--y_column Y_COLUMN ground truth column\n\t-d DELIMITER,\t--delimiter DELIMITER column delimiter (default: ',')"
+version: "1.2"
+python_script: {
+  source_uuid: "metrics.py"
+  source_name: "metrics.py"
+  source: {
+    raw: {
+      source_uuid: "metrics.py"
+      source_name: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "aa"
+  name: "dataset"
+  data_hint: STRUCTURED_TEXT
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "bb"
+  name: "metrics_csv"
+  data_hint: STRUCTURED_TEXT
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "frolvlad/alpine-python-machinelearning"
+    command: "python {{ script_path }} {{ dataset }} {{ metrics_csv }}"
+  }
+  new_parameters: {
+    key: "predicted_column"
+    value: {
+      optional: true
+      value: ""
+    }
+  }
+  new_parameters: {
+    key: "y_column"
+    value: {
+      optional: false
+      value: "mean"
+    }
+  }
+  new_parameters: {
+    key: "delimiter"
+    value: {
+      optional: false
+      value: ","
+    }
+  }
+}

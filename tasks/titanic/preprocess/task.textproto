@@ -1,0 +1,33 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "titanic_preprocess"
+name: "Titanic - preprocess"
+description: "- adds CabinClass column\n"
+version: "1.0"
+python_script: {
+  source_uuid: "preprocess.py"
+  source_name: "preprocess.py"
+  source: {
+    raw: {
+      source_uuid: "preprocess.py"
+      source_name: "preprocess.py"
+    }
+  }
+}
+inputs: {
+  id: "bb"
+  name: "input"
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "aa"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:latest"
+    command: "python {{ script_path }} {{ input }} {{ output }}"
+  }
+}

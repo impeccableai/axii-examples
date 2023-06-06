@@ -1,0 +1,41 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "connector"
+name: "connector"
+python_script: {
+  source_uuid: "connector.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "conncetor.py"
+      source_name: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "bg"
+  name: "gen"
+  data_kind: FS_FILE
+}
+inputs: {
+  id: "bf"
+  name: "fib"
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "bs"
+  name: "sum"
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "bd"
+  name: "diff"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+}

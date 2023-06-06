@@ -1,0 +1,37 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "extract_dir_python"
+name: "Extract dir [Python]"
+version: "1.1"
+python_script: <
+  source_uuid: "script.py"
+  source: <
+    raw: <
+      source_uuid: "script.py"
+    >
+  >
+>
+inputs: <
+  id: "0"
+  name: "in_dir"
+  data_kind: FS_DIR
+>
+outputs: <
+  id: "0"
+  name: "out"
+  data_kind: FS_DIR
+>
+default_runtime: <
+  new_parameters: <
+    key: "name"
+    value: <
+      optional: true
+      value: ""
+      >
+  >
+  python_script_runtime: <
+    docker_image: "python:latest"
+    command: "python {{ script_path }} {{ in_dir }} {{ out }}"
+  >
+>

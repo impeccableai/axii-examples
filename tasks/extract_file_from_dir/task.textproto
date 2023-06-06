@@ -1,0 +1,32 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "extract_file_from_dir"
+name: "Extract file from dir"
+version: "1.0.1"
+container: <
+
+>
+inputs: <
+  id: "0"
+  name: "dir"
+  data_kind: FS_DIR
+>
+outputs: <
+  id: "0"
+  name: "file"
+  data_kind: FS_FILE
+>
+default_runtime: <
+  new_parameters: <
+    key: "file_name"
+    value: <
+      optional: true
+      value: ""
+      >
+  >
+  container_runtime: <
+    docker_image: "alpine:latest"
+    command: "cp {{ dir }}/{{ file_name }} {{ file }}"
+  >
+>

@@ -1,0 +1,31 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "dir_list"
+name: "dir list"
+python_script: {
+  source_uuid: "script.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "script.py"
+      source_name: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "aa"
+  name: "dir"
+  data_kind: FS_DIR
+}
+outputs: {
+  id: "bb"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+}

@@ -1,0 +1,34 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "generator"
+name: "generator"
+version: "1.1"
+python_script: {
+  source_uuid: "generator.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "generator.py"
+      source_name: "script.py"
+    }
+  }
+}
+outputs: {
+  id: "aa"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+  new_parameters: {
+    key: "size"
+    value: {
+      optional: false
+      value: "15"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "bad_python"
+name: "Bad Python"
+python_script: {
+  source_uuid: "source"
+  source_name: "script.py"
+  source: {
+      raw: {
+        source_uuid: "source"
+        source_name: "script.py"
+      }
+  }
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}/source/first/second/main.py"
+  }
+}

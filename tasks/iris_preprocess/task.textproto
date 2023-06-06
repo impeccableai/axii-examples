@@ -1,0 +1,33 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "iris_preprocess"
+name: "Preprocess Iris dataset"
+description: "Preprocess Iris Dataset: replaces class names with encoded values [-h] --input INPUT --output OUTPUT\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t--input INPUT\n\t--output OUTPUT"
+version: "1.0.0"
+python_script: {
+  source_uuid: "script.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "script.py"
+      source_name: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "aa"
+  name: "input"
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "aa"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "frolvlad/alpine-python-machinelearning"
+    command: "python {{ script_path }}"
+  }
+}

@@ -1,0 +1,25 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "cuda_test"
+name: "cuda test"
+nondeterministic: true
+python_script: {
+  source_uuid: "script.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "script.py"
+      source_name: "script.py"
+    }
+  }
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "pytorch/pytorch:latest"
+    command: "python {{ script_path }}"
+  }
+  resources: {
+    gpu: "1"
+  }
+}

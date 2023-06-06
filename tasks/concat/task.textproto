@@ -1,0 +1,34 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "concat"
+name: "Concat files"
+description: "Concat files\nusage: Concat files [-h] -o OUTPUT inputs [inputs ...]\n\npositional arguments:\ninputs: input file(s)\n\noptional arguments:\n-h, --help how this help message and exit\n-o OUTPUT, --out_file OUTPUT output file"
+version: "1.0"
+python_script: {
+  source_uuid: "concat.py"
+  source_name: "concat.py"
+  source: {
+    raw: {
+      source_uuid: "concat.py"
+      source_name: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "bb"
+  name: "inputs"
+  data_kind: FS_FILE
+  multiple: true
+}
+outputs: {
+  id: "aa"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:latest"
+    command: "python {{ script_path }} {{ inputs }} -o {{ output }}"
+  }
+}

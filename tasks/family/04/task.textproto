@@ -1,0 +1,29 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "family_04"
+name: "family - child task 4"
+version: "1.3"
+parent_uuid: "family_03"
+state: TASK_STATE_ACTIVE
+python_script: {
+  source_uuid: "generator.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "generator.py"
+      source_name: "script.py"
+    }
+  }
+}
+outputs: {
+  id: "aa"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+}

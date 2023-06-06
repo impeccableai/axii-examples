@@ -1,0 +1,41 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "stack_files"
+name: "Stack files"
+description: "Stack files\nStack files [-h] -o OUTPUT [-d DELIMITER] inputs [inputs ...]\n\npositional arguments:\ninputs\tinput file(s)\n\noptional arguments:\n\t-h, --help\tshow this help message and exit\n\t-o OUTPUT, --out_file OUTPUT\t output file\n\t-d DELIMITER, --delimiter DELIMITER\tdelimiter"
+version: "1.1"
+python_script: {
+  source_uuid: "stack.py"
+  source_name: "stack.py"
+  source: {
+    raw: {
+      source_uuid: "stack.py"
+      source_name: "stack.py"
+    }
+  }
+}
+inputs: {
+  id: "bb"
+  name: "inputs"
+  data_kind: FS_FILE
+  multiple: true
+}
+outputs: {
+  id: "aa"
+  name: "output"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:latest"
+    command: "python {{ script_path }} {{ inputs }} -o {{ output }}"
+  }
+  new_parameters: {
+    key: "delimiter"
+    value: {
+      optional: false
+      value: ","
+    }
+  }
+}

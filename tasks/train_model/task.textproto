@@ -1,0 +1,77 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "train_model"
+name: "Train sklearn model"
+description: "usage: Train sklearn model [-h] -y Y_COLUMN -c {DecisionTreeClassifier,GradientBoostingClassifier} [--max_depth MAX_DEPTH] [--n_estimators N_ESTIMATORS] [--random_seed RANDOM_SEED] train_set trained_model\n\npositional arguments:\n  train_set\ttrain set csv\n  trained_model\ttrained model file\n\noptions:\n  -h, --help\tshow this help message and exit\n  -y Y_COLUMN, --y_column Y_COLUMN\tclass column\n  -c {DecisionTreeClassifier,GradientBoostingClassifier}, --classifier {DecisionTreeClassifier,GradientBoostingClassifier}\tclassifier\n  --max_depth MAX_DEPTH\n  --n_estimators N_ESTIMATORS\n  --random_seed RANDOM_SEED"
+version: "1.1"
+python_script: {
+  source_uuid: "train.py"
+  source_name: "train.py"
+  source: {
+    raw: {
+      source_uuid: "train.py"
+      source_name: "train.py"
+    }
+  }
+}
+inputs: {
+  id: "aa"
+  name: "train_set"
+  data_kind: FS_FILE
+  data_hint: STRUCTURED_TEXT
+}
+outputs: {
+  id: "bb"
+  name: "trained_model"
+  data_kind: FS_FILE
+  data_hint: BINARY
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:latest"
+    command: "python {{ script_path }} {{ train_set }} {{ trained_model }}"
+  }
+  new_parameters: {
+    key: "y_column"
+    value: {
+      optional: false
+      value: "Y"
+    }
+  }
+  new_parameters: {
+    key: "classifier"
+    value: {
+      optional: false
+      value: "DecisionTreeClassifier"
+    }
+  }
+  new_parameters: {
+    key: "max_depth"
+    value: {
+      optional: false
+      value: "10"
+    }
+  }
+  new_parameters: {
+    key: "n_estimators"
+    value: {
+      optional: false
+      value: "50"
+    }
+  }
+  new_parameters: {
+    key: "random_seed"
+    value: {
+      optional: false
+      value: "42"
+    }
+  }
+  new_parameters: {
+    key: "delimiter"
+    value: {
+      optional: false
+      value: ","
+    }
+  }
+}

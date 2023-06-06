@@ -1,0 +1,27 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "sql_query"
+name: "SQL Query"
+python_script: {
+  source_uuid: "query.sql"
+  source_name: "query.sql"
+  source: {
+    raw: {
+      source_uuid: "query.sql"
+      source_name: "query.sql"
+    }
+  }
+}
+outputs: {
+  id: "data"
+  name: "data"
+  data_hint: DATA_HINT_NONE
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "alpine"
+    command: "psql {{ script_path }}"
+  }
+}

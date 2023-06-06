@@ -1,0 +1,60 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "encode_column_v1_1_1"
+name: "Label encode column in a CSV file"
+description: "Drop columns from a file [-h] [-d DELIMITER] [-hdr HAS_HEADER] input output column\npositional arguments:\n  input\tinput file\n  output\toutput file\n  column\tcolumn name or idx to encode\n\noptional arguments:\n  -h, --help\tshow this help message and exit\n  -d DELIMITER, --delimiter DELIMITER column delimiter (default: ',')\n  -hdr HAS_HEADER, --has_header HAS_HEADER whether the file has header (default: True)"
+version: "1.1.2"
+parent_uuid: "encode_column"
+python_script: {
+  source_uuid: "encode.py"
+  source_name: "encode.py"
+  source: {
+    raw: {
+      source_uuid: "encode.py"
+      source_name: "encode.py"
+    }
+  }
+}
+inputs: {
+  id: "bb"
+  name: "input"
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "aa"
+  name: "output"
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "cc"
+  name: "encoded_column"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:latest"
+    command: "python {{ script_path }} {{ input }} {{ output }} {{ encoded_column }} {{ column }}"
+  }
+  new_parameters: {
+    key: "delimiter"
+    value: {
+      optional: false
+      value: ","
+    }
+  }
+  new_parameters: {
+    key: "column"
+    value: {
+      optional: true
+      value: ""
+    }
+  }
+  new_parameters: {
+    key: "has_header"
+    value: {
+      optional: false
+      value: "True"
+    }
+  }
+}

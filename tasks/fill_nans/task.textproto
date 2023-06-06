@@ -1,0 +1,63 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "fill_nans"
+name: "Fill NaNs in column"
+description: "Fill NaNs in column [-h] [--value VALUE] [-d DELIMITER] input_csv output_csv column {mean,max,min,const}\n\npositional arguments:\ninput_csv\tinput CSV\noutput_csv\toutput CSV\ncolumn\tcolumn to fill\n{mean,max,min,const}\tfill mode\n\noptions:\n  -h, --help show this help message and exit\n  --value VALUE const value to fill\n  -d DELIMITER, --delimiter DELIMITER column delimiter (default: ',')"
+version: "1.1"
+python_script: {
+  source_uuid: "fill.py"
+  source_name: "fill.py"
+  source: {
+    raw: {
+      source_uuid: "fill.py"
+      source_name: "fill.py"
+    }
+  }
+}
+inputs: {
+  id: "aa"
+  name: "input_csv"
+  data_hint: STRUCTURED_TEXT
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "bb"
+  name: "output_csv"
+  data_hint: STRUCTURED_TEXT
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:latest"
+    command: "python {{ script_path }} {{ input_csv }} {{ output_csv }} {{ column }}"
+  }
+  new_parameters: {
+    key: "column"
+    value: {
+      optional: true
+      value: ""
+    }
+  }
+  new_parameters: {
+    key: "mode"
+    value: {
+      optional: false
+      value: "mean"
+    }
+  }
+  new_parameters: {
+    key: "value"
+    value: {
+      optional: false
+      value: "0"
+    }
+  }
+  new_parameters: {
+    key: "delimiter"
+    value: {
+      optional: false
+      value: ","
+    }
+  }
+}

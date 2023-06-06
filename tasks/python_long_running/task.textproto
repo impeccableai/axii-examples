@@ -1,0 +1,37 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "python_long_running"
+name: "sleeper"
+version: "1.1"
+python_script: {
+  source_uuid: "script.py"
+  source_name: "script.py"
+  source: {
+    raw: {
+      source_uuid: "script.py"
+      source_name: "script.py"
+    }
+  }
+}
+nondeterministic: true
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+  new_parameters: {
+    key: "duration"
+    value: {
+      optional: false
+      value: "900"
+    }
+  }
+  new_parameters: {
+    key: "step_duration"
+    value: {
+      optional: false
+      value: "60"
+    }
+  }
+}

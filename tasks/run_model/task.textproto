@@ -1,0 +1,48 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "run_model"
+name: "Run sklearn model"
+description: "Runs sklearn model on a CSV file and produces predictions CSV file [-h] [-d DELIMITER] trained_model dataset preds_csv\n\npositional arguments:\n\ttrained_model\ttrained model file\n\tdataset\tCSV data file\n\tpreds_csv\t CSV file with predictions\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t-d DELIMITER, --delimiter DELIMITER\tcolumn delimiter (default: ',')"
+version: "1.1"
+python_script: {
+  source_uuid: "run.py"
+  source_name: "run.py"
+  source: {
+    raw: {
+      source_uuid: "run.py"
+      source_name: "run.py"
+    }
+  }
+}
+inputs: {
+  id: "aa"
+  name: "trained_model"
+  data_kind: FS_FILE
+  data_hint: BINARY
+}
+inputs: {
+  id: "bb"
+  name: "dataset"
+  data_kind: FS_FILE
+  data_hint: STRUCTURED_TEXT
+}
+outputs: {
+  id: "cc"
+  name: "preds_csv"
+  data_kind: FS_FILE
+  data_hint: STRUCTURED_TEXT
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "frolvlad/alpine-python-machinelearning"
+    command: "python {{ script_path }} {{ trained_model }} {{ dataset }}  {{ preds_csv }}"
+  }
+  new_parameters: {
+    key: "delimiter"
+    value: {
+      optional: false
+      value: ","
+    }
+  }
+}

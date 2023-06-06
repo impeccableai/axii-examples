@@ -1,0 +1,63 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "basic_binary_metrics_v1_1"
+name: "Basic metrics"
+description: "Compute basic metrics for binary classification task [-h] -p PROB_COLUMN -y Y_COLUMN [-d DELIMITER] dataset metrics_csv\n\npositional arguments:\ndataset\tinput CSV\nmetrics_csv\toutput CSV\n\noptions:\n-h, --help\tshow this help message and exit\n-p PROB_COLUMN, --prob_column PROB_COLUMN\tprobability column\n-y Y_COLUMN, --y_column Y_COLUMN\tground truth column\n-d DELIMITER, --delimiter DELIMITER\tcolumn delimiter (default: ',')"
+version: "1.2"
+python_script: {
+  source_uuid: "metrics.py"
+  source_name: "metrics.py"
+  source: {
+    raw: {
+      source_uuid: "metrics.py"
+      source_name: "metrics.py"
+    }
+  }
+}
+inputs: {
+  id: "aa"
+  name: "dataset"
+  data_hint: STRUCTURED_TEXT
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "bb"
+  name: "metrics_csv"
+  data_hint: STRUCTURED_TEXT
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "frolvlad/alpine-python-machinelearning"
+    command: "python {{ script_path }} {{ dataset }} {{ metrics_csv }}"
+  }
+  new_parameters: {
+    key: "prob_column"
+    value: {
+      optional: true
+      value: ""
+    }
+  }
+  new_parameters: {
+    key: "prob_column"
+    value: {
+      optional: true
+      value: ""
+    }
+  }
+  new_parameters: {
+    key: "y_column"
+    value: {
+      optional: false
+      value: "mean"
+    }
+  }
+  new_parameters: {
+    key: "delimiter"
+    value: {
+      optional: false
+      value: ","
+    }
+  }
+}
