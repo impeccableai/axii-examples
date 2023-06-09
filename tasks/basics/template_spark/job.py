@@ -1,16 +1,10 @@
 import argparse
-import time
 from pyspark.sql import SparkSession
 
 
 def main(args):
     sc = SparkSession.builder.appName("PysparkExample").getOrCreate()
 
-    dataframe = sc.read.option("header", "true").option(
-        "mode", "DROPMALFORMED").csv(args.input)
-    dataframe_dropdup = dataframe.dropDuplicates()
-    dataframe_dropdup.coalesce(1).writemode('overwrite').option(
-        "header", "true").csv(args.output)
     sc.stop()
 
 

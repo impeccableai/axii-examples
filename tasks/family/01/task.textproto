@@ -7,8 +7,6 @@ version: "1.1"
 parent_uuid: "family_00"
 state: TASK_STATE_DEPRECATED
 python_script: {
-  source_uuid: "generator.py"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "generator.py"

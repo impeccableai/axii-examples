@@ -5,8 +5,6 @@ uuid: "cuda_test"
 name: "cuda test"
 nondeterministic: true
 python_script: {
-  source_uuid: "script.py"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "script.py"

@@ -5,8 +5,6 @@ uuid: "random_python"
 name: "Random Python"
 nondeterministic: true
 python_script: {
-  source_uuid: "source.py"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "source.py"

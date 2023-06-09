@@ -6,8 +6,6 @@ name: "Dataset statistics"
 description: "Compute dataset statistics [-h] -y Y_COLUMN [-d DELIMITER] dataset stats_csv\n\npositional arguments:\n\tdataset\tinput CSV\n\tstats_csv\toutput CSV\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t-y Y_COLUMN, --y_column Y_COLUMN\tground truth column\n\t-d DELIMITER, --delimiter DELIMITER\tcolumn delimiter (default: ',')"
 version: "1.1"
 python_script: {
-  source_uuid: "stats.py"
-  source_name: "stats.py"
   source: {
     raw: {
       source_uuid: "stats.py"

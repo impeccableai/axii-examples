@@ -4,8 +4,6 @@
 uuid: "reader"
 name: "reader"
 python_script: {
-  source_uuid: "reader.py"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "reader.py"

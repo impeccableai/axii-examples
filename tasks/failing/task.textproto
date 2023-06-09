@@ -4,8 +4,6 @@
 uuid: "failing"
 name: "failing"
 python_script: {
-  source_uuid: "failing.py"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "failing.py"

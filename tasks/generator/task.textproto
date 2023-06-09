@@ -5,8 +5,6 @@ uuid: "generator"
 name: "generator"
 version: "1.1"
 python_script: {
-  source_uuid: "generator.py"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "generator.py"

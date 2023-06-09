@@ -6,8 +6,6 @@ name: "Classification Metrics"
 description: "Compute metrics for classification task [-h] -p PREDICTED_COLUMN -y Y_COLUMN [-d DELIMITER] dataset metrics_csv\n\npositional arguments:\n\tdataset\tinput CSV\n\tmetrics_csv\toutput CSV\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t-p PREDICTED_COLUMN,\t--predicted_column PREDICTED_COLUMN predicted column\n\t-y Y_COLUMN,\t--y_column Y_COLUMN ground truth column\n\t-d DELIMITER,\t--delimiter DELIMITER column delimiter (default: ',')"
 version: "1.2"
 python_script: {
-  source_uuid: "metrics.py"
-  source_name: "metrics.py"
   source: {
     raw: {
       source_uuid: "metrics.py"

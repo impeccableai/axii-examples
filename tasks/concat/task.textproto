@@ -6,8 +6,6 @@ name: "Concat files"
 description: "Concat files\nusage: Concat files [-h] -o OUTPUT inputs [inputs ...]\n\npositional arguments:\ninputs: input file(s)\n\noptional arguments:\n-h, --help how this help message and exit\n-o OUTPUT, --out_file OUTPUT output file"
 version: "1.0"
 python_script: {
-  source_uuid: "concat.py"
-  source_name: "concat.py"
   source: {
     raw: {
       source_uuid: "concat.py"

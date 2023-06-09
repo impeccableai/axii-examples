@@ -5,8 +5,6 @@ uuid: "python_long_running"
 name: "sleeper"
 version: "1.1"
 python_script: {
-  source_uuid: "script.py"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "script.py"

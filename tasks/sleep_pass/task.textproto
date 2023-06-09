@@ -6,8 +6,6 @@ name: "Sleep and passthrough"
 description: "Sleep for `time` seconds and then copy input to output"
 version: "1.1"
 python_script: {
-  source_uuid: "sleep_pass.py"
-  source_name: "sleep_pass.py"
   source: {
     raw: {
       source_uuid: "sleep_pass.py"

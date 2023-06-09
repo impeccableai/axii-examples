@@ -4,34 +4,33 @@
 uuid: "extract_dir_python"
 name: "Extract dir [Python]"
 version: "1.1"
-python_script: <
-  source_uuid: "script.py"
-  source: <
-    raw: <
+python_script: {
+  source: {
+    raw: {
       source_uuid: "script.py"
-    >
-  >
->
-inputs: <
+    }
+  }
+}
+inputs: {
   id: "0"
   name: "in_dir"
   data_kind: FS_DIR
->
-outputs: <
+}
+outputs: {
   id: "0"
   name: "out"
   data_kind: FS_DIR
->
-default_runtime: <
-  new_parameters: <
+}
+default_runtime: {
+  new_parameters: {
     key: "name"
-    value: <
+    value: {
       optional: true
       value: ""
-      >
-  >
-  python_script_runtime: <
+      }
+  }
+  python_script_runtime: {
     docker_image: "python:latest"
     command: "python {{ script_path }} {{ in_dir }} {{ out }}"
-  >
->
+  }
+}

@@ -1,21 +1,19 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "spark_dedup_v1_1_0"
-name: "Remove duplicates [SPARK]"
+uuid: "template_spark_task"
+name: "Template Spark Task"
+description: "This Task can be used as a basic template for your own Spark Tasks"
 inputs: {
   id: "0"
   name: "input"
-  data_hint: STRUCTURED_TEXT
   data_kind: FS_FILE
 }
 outputs: {
   id: "0"
   name: "output"
-  data_hint: STRUCTURED_TEXT
   data_kind: FS_DIR
 }
-version: "1.1.0"
 default_runtime: {
   spark_job_runtime: {
     k8s_runtime: {
@@ -31,8 +29,8 @@ default_runtime: {
 spark_job: {
   source: {
     raw: {
-      source_uuid: "dedup.py"
-      source_name: "dedup.py"
+      source_uuid: "job.py"
+      source_name: "job.py"
     }
   }
 }

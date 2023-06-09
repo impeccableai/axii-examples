@@ -4,8 +4,6 @@
 uuid: "s3_dir_reader"
 name: "s3 dir reader"
 python_script: {
-  source_uuid: "source"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "source"

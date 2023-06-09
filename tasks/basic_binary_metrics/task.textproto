@@ -6,8 +6,6 @@ name: "Basic metrics"
 description: "Compute basic metrics for binary classification task [-h] -p PROB_COLUMN -y Y_COLUMN [-d DELIMITER] dataset metrics_csv\n\npositional arguments:\ndataset\tinput CSV\nmetrics_csv\toutput CSV\n\noptions:\n-h, --help\tshow this help message and exit\n-p PROB_COLUMN, --prob_column PROB_COLUMN\tprobability column\n-y Y_COLUMN, --y_column Y_COLUMN\tground truth column\n-d DELIMITER, --delimiter DELIMITER\tcolumn delimiter (default: ',')"
 version: "1.2"
 python_script: {
-  source_uuid: "metrics.py"
-  source_name: "metrics.py"
   source: {
     raw: {
       source_uuid: "metrics.py"

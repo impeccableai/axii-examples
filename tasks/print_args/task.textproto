@@ -6,8 +6,6 @@ name: "Print args"
 description: "Prints args"
 version: "1.1"
 python_script: {
-  source_uuid: "print.py"
-  source_name: "print.py"
   source: {
     raw: {
       source_uuid: "print.py"

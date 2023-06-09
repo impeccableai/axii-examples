@@ -6,8 +6,6 @@ name: "Drop columns from CSV file"
 description: "Drop columns from a file [-h]\nUsage: drop_columns.py --input INPUT --output OUTPUT --drop_columns DROP_COLUMNS [-d DELIMITER] [-hdr HAS_HEADER]\n\noptional arguments:\n  -h, --help show this help message and exit\n  --input INPUT input file\n  --output OUTPUT output file\n  --drop_columns DROP_COLUMNS comma separated list of column names or indices to drop\n  -d DELIMITER, --delimiter DELIMITER column delimiter (default: ',')\n  -hdr HAS_HEADER, --has_header HAS_HEADER whether the file has header (default: True"
 version: "1.1"
 python_script: {
-  source_uuid: "drop_columns.py"
-  source_name: "drop_columns.py"
   source: {
     raw: {
       source_uuid: "drop_columns.py"

@@ -3,31 +3,30 @@
 
 uuid: "compute_image_set_stats"
 name: "Compute image set statistics"
-python_script: <
-  source_uuid: "script.py"
-  source: <
-    raw: <
+python_script: {
+  source: {
+    raw: {
       source_uuid: "script.py"
       source_name: "script.py"
-    >
-  >
->
-inputs: <
+    }
+  }
+}
+inputs: {
   id: "0"
   name: "images"
   data_hint: IMAGE
   data_kind: FS_DIR
->
-outputs: <
+}
+outputs: {
   id: "0"
   name: "stats"
   data_hint: STRUCTURED_TEXT
   data_kind: FS_FILE
->
+}
 version: "1.0.1"
-default_runtime: <
-  python_script_runtime: <
+default_runtime: {
+  python_script_runtime: {
     docker_image: "jupyter/datascience-notebook:latest"
     command: "python {{ script_path }} {{ images }} {{ stats }}"
-  >
->
+  }
+}

@@ -3,29 +3,28 @@
 
 uuid: "pokemon_dataset_analysis"
 name: "Pokemon dataset analysis"
-python_script: <
-  source_uuid: "script.py"
-  source: <
-    raw: <
+python_script: {
+  source: {
+    raw: {
       source_uuid: "script.py"
-    >
-  >
->
-inputs: <
+    }
+  }
+}
+inputs: {
   id: "0"
   name: "dataset"
   data_kind: FS_DIR
->
-outputs: <
+}
+outputs: {
   id: "0"
   name: "plots"
   data_kind: FS_DIR
->
+}
 description: "Basic analysis for Pokemon dataset"
 version: "1.0.5"
-default_runtime: <
-  python_script_runtime: <
+default_runtime: {
+  python_script_runtime: {
     docker_image: "jupyter/datascience-notebook:latest"
     command: "python {{ script_path }} {{ dataset }} {{ plots }}"
-  >
->
+  }
+}

@@ -6,8 +6,6 @@ name: "Fill NaNs in column"
 description: "Fill NaNs in column [-h] [--value VALUE] [-d DELIMITER] input_csv output_csv column {mean,max,min,const}\n\npositional arguments:\ninput_csv\tinput CSV\noutput_csv\toutput CSV\ncolumn\tcolumn to fill\n{mean,max,min,const}\tfill mode\n\noptions:\n  -h, --help show this help message and exit\n  --value VALUE const value to fill\n  -d DELIMITER, --delimiter DELIMITER column delimiter (default: ',')"
 version: "1.1"
 python_script: {
-  source_uuid: "fill.py"
-  source_name: "fill.py"
   source: {
     raw: {
       source_uuid: "fill.py"

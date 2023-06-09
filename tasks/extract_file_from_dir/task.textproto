@@ -4,29 +4,27 @@
 uuid: "extract_file_from_dir"
 name: "Extract file from dir"
 version: "1.0.1"
-container: <
-
->
-inputs: <
+container: {}
+inputs: {
   id: "0"
   name: "dir"
   data_kind: FS_DIR
->
-outputs: <
+}
+outputs: {
   id: "0"
   name: "file"
   data_kind: FS_FILE
->
-default_runtime: <
-  new_parameters: <
+}
+default_runtime: {
+  new_parameters: {
     key: "file_name"
-    value: <
+    value: {
       optional: true
       value: ""
-      >
-  >
-  container_runtime: <
+      }
+  }
+  container_runtime: {
     docker_image: "alpine:latest"
     command: "cp {{ dir }}/{{ file_name }} {{ file }}"
-  >
->
+  }
+}

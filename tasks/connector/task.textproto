@@ -4,8 +4,6 @@
 uuid: "connector"
 name: "connector"
 python_script: {
-  source_uuid: "connector.py"
-  source_name: "script.py"
   source: {
     raw: {
       source_uuid: "conncetor.py"

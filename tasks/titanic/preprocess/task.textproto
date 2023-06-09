@@ -6,8 +6,6 @@ name: "Titanic - preprocess"
 description: "- adds CabinClass column\n"
 version: "1.0"
 python_script: {
-  source_uuid: "preprocess.py"
-  source_name: "preprocess.py"
   source: {
     raw: {
       source_uuid: "preprocess.py"

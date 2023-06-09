@@ -1,0 +1,30 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "template_container_task"
+name: "Template Container Task"
+description: "This Task can be used as a basic template for your own Container Tasks"
+inputs: {
+  id: "0"
+  name: "input"
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "0"
+  name: "output"
+  data_kind: FS_FILE
+}
+container: {}
+default_runtime: {
+  new_parameters: {
+    key: "parameter"
+    value: {
+     optional: false
+      value: "value"
+    }
+  }
+  container_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+}

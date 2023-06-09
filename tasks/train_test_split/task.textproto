@@ -6,8 +6,6 @@ name: "Split Train/Test sets"
 description: "Splits (randomly) a CSV file into train and test sets [-h] [--seed SEED] [-d DELIMITER] [-hdr HAS_HEADER] input train_set test_set test_size\n\npositional arguments:\n\tinput\tinput file\n\ttrain_set\ttrain set file\n\ttest_set\ttest set file\n\ttest_size\tsize of the test set\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t--seed SEED\trandom seed\n\t-d DELIMITER, --delimiter DELIMITER\tcolumn delimiter (default: ',')\n\t-hdr HAS_HEADER, --has_header HAS_HEADER\twhether the file has header (default: True)"
 version: "1.1"
 python_script: {
-  source_uuid: "split.py"
-  source_name: "split.py"
   source: {
     raw: {
       source_uuid: "split.py"
