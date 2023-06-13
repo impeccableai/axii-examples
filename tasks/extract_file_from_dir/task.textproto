@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "extract_file_from_dir"
+uuid: "7adea997-c966-4c6e-9b0c-107c531df514"
 name: "Extract file from dir"
 container: {}
 inputs: {

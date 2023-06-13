@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "tfboard"
+uuid: "7bb7c4c0-80c3-45db-a6e9-d0b934263314"
 name: "Tensorboard test"
 description: ""
 version: "1.0"

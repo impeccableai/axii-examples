@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "counter"
+uuid: "dd61fd51-d274-443b-b62b-34e17c511df3"
 name: "counter"
 python_script: {
   source: {

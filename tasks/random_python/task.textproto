@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "random_python"
+uuid: "12877024-280b-44d9-a7c3-1a025380a1b1"
 name: "Random Python"
 nondeterministic: true
 python_script: {

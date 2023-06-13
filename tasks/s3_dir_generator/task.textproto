@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "s3_dir_generator"
+uuid: "468c3541-d47d-49b5-a390-b16bfc080d08"
 name: "s3 dir generator"
 python_script: {
   source: {

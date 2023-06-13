@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "compute_image_set_stats"
+uuid: "0f3723b7-f917-45b7-9060-0eeb4ec16a92"
 name: "Compute image set statistics"
 python_script: {
   source: {

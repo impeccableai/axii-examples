@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "s3_generator"
+uuid: "fe3e1e2f-d6a0-45ba-a11a-6677fcaba2fb"
 name: "s3 generator"
 python_script: {
   source: {

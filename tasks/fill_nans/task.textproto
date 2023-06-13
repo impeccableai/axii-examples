@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "fill_nans"
+uuid: "555c3c42-01b5-43ff-8834-6767f5a5230b"
 name: "Fill NaNs in column"
 description: "Fill NaNs in column [-h] [--value VALUE] [-d DELIMITER] input_csv output_csv column {mean,max,min,const}\n\npositional arguments:\ninput_csv\tinput CSV\noutput_csv\toutput CSV\ncolumn\tcolumn to fill\n{mean,max,min,const}\tfill mode\n\noptions:\n  -h, --help show this help message and exit\n  --value VALUE const value to fill\n  -d DELIMITER, --delimiter DELIMITER column delimiter (default: ',')"
 version: "1.1"

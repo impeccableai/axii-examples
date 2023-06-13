@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "template_python_task"
+uuid: "fdd0f530-8026-471c-b903-945faa4b23b3"
 name: "Template Python Task"
 description: "This Task can be used as a basic template for your own Python Tasks"
 inputs: {

@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "run_model"
+uuid: "fbcdb120-b7f7-4aea-82b2-cdf34c1cb075"
 name: "Run sklearn model"
 description: "Runs sklearn model on a CSV file and produces predictions CSV file [-h] [-d DELIMITER] trained_model dataset preds_csv\n\npositional arguments:\n\ttrained_model\ttrained model file\n\tdataset\tCSV data file\n\tpreds_csv\t CSV file with predictions\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t-d DELIMITER, --delimiter DELIMITER\tcolumn delimiter (default: ',')"
 version: "1.1"

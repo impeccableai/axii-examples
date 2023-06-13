@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "hello_world"
+uuid: "30f0ae53-088a-4879-8bb4-d3dbeb1b3a67"
 name: "Hello World"
 description: "Simple Python Hello World"
 python_script: {

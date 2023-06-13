@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "python_long_running"
+uuid: "f339e598-4ffc-4f24-ae91-603589603ef9"
 name: "sleeper"
 version: "1.1"
 python_script: {

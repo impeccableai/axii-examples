@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "spark_dedup_v1_1_0"
+uuid: "eecb9c91-a006-4a01-986a-9a2c59024625"
 name: "Remove duplicates [SPARK]"
 inputs: {
   id: "0"

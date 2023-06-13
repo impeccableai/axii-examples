@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "git_task"
+uuid: "a72a0659-b771-4d3e-93e7-e8b8dd78c3af"
 name: "Git Task"
 description: "This is an example of a Task that is pulled from Git."
 inputs: {

@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "extract_dir_python"
+uuid: "b94ce6d0-2d5b-415f-8d07-cea7997ce54e"
 name: "Extract dir [Python]"
 version: "1.1"
 python_script: {

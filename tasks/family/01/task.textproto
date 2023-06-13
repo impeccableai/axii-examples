@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "family_01"
+uuid: "0125d3f0-4ae2-4e30-925e-fe87b7798fe1"
 name: "family - child task 1"
 version: "1.1"
 parent_uuid: "family_00"

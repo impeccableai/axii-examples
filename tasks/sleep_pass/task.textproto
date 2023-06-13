@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "sleep_pass"
+uuid: "fb9cc6d5-5ebf-42da-ab7d-9aaa2cdef630"
 name: "Sleep and passthrough"
 description: "Sleep for `time` seconds and then copy input to output"
 version: "1.1"

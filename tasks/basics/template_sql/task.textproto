@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "sql_query"
+uuid: "14af676e-701f-4809-9cbb-9bd435abbef9"
 name: "SQL Query"
 sql: {
   source: {

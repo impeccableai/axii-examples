@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "connector"
+uuid: "73965517-5a77-4763-b09c-4b545a4e062f"
 name: "connector"
 python_script: {
   source: {

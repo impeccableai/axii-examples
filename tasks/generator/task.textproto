@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "generator"
+uuid: "5bfcb6d9-e837-4e39-a726-07d466096b4c"
 name: "generator"
 version: "1.1"
 python_script: {

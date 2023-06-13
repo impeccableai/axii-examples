@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "pokemon_data_split"
+uuid: "0a255786-25c4-4795-9c44-cc5c8ae735ec"
 name: "pokemon data split"
 python_script: {
   source: {

@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "gcs_generator"
+uuid: "93ef7284-6b76-40ca-80cd-53ca60cce744"
 name: "GCS generator"
 python_script: {
   source: {

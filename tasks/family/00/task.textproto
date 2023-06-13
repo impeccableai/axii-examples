@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "family_00"
+uuid: "f28b2ba9-7516-4f3c-8a9c-b7925455672d"
 name: "family - parent task"
 version: "1.0"
 state: TASK_STATE_DEPRECATED

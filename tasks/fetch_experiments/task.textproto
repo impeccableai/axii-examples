@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "fetch_experiments"
+uuid: "27fd8d16-19c8-4d0d-ab2f-092a7b2b2485"
 name: "Fetch Experiments"
 version: "1.1"
 sql: {

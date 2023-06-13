@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "dir_list"
+uuid: "2890a481-372c-4053-a635-a420905b3f1e"
 name: "dir list"
 python_script: {
   source: {

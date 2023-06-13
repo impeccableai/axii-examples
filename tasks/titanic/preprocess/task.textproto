@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "titanic_preprocess"
+uuid: "bd00cb66-f4ad-43db-a19c-2ae278319d9a"
 name: "Titanic - preprocess"
 description: "- adds CabinClass column\n"
 version: "1.0"

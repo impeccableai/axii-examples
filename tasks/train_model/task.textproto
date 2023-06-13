@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "train_model"
+uuid: "3053461e-c004-45fc-8631-67b95458363e"
 name: "Train sklearn model"
 description: "usage: Train sklearn model [-h] -y Y_COLUMN -c {DecisionTreeClassifier,GradientBoostingClassifier} [--max_depth MAX_DEPTH] [--n_estimators N_ESTIMATORS] [--random_seed RANDOM_SEED] train_set trained_model\n\npositional arguments:\n  train_set\ttrain set csv\n  trained_model\ttrained model file\n\noptions:\n  -h, --help\tshow this help message and exit\n  -y Y_COLUMN, --y_column Y_COLUMN\tclass column\n  -c {DecisionTreeClassifier,GradientBoostingClassifier}, --classifier {DecisionTreeClassifier,GradientBoostingClassifier}\tclassifier\n  --max_depth MAX_DEPTH\n  --n_estimators N_ESTIMATORS\n  --random_seed RANDOM_SEED"
 version: "1.1"

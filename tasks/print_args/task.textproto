@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "print_args"
+uuid: "53e115e3-9f0c-4c86-929e-905a26e62c87"
 name: "Print args"
 description: "Prints args"
 version: "1.1"

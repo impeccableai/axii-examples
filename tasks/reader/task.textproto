@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "reader"
+uuid: "f2e4fb74-2eeb-4246-ba2f-659c52ad2b0b"
 name: "reader"
 python_script: {
   source: {

@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "cuda_test"
+uuid: "d8daff2a-d3b1-47b4-82cf-14ba7dfe11df"
 name: "cuda test"
 nondeterministic: true
 python_script: {

@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "s3_dir_reader"
+uuid: "4b830070-f6c5-43f9-84b1-ed0c76b782f8"
 name: "s3 dir reader"
 python_script: {
   source: {
