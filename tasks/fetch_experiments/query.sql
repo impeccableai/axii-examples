@@ -1,1 +1,1 @@
-SELECT uuid, name from experiments LIMIT {{ limit }};
+SELECT uuid, name from experiments LIMIT {{ .limit }};

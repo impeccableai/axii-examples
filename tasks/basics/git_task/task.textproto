@@ -1,0 +1,36 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "git_task"
+name: "Git Task"
+description: "This is an example of a Task that is pulled from Git."
+inputs: {
+  id: "0"
+  name: "input"
+  data_kind: FS_FILE
+}
+outputs: {
+  id: "0"
+  name: "output"
+  data_kind: FS_FILE
+}
+python_script: {
+  source: {
+    git: {
+      path: "script.py"
+    }
+  }
+}
+default_runtime: {
+  new_parameters: {
+    key: "parameter"
+    value: {
+     optional: false
+      value: "value"
+    }
+  }
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+}

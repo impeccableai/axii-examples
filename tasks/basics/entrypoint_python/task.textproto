@@ -1,10 +1,9 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "entrypoint_python_v1"
-name: "Python script with entrypoint"
+uuid: "entrypoint_python"
+name: "Python Task with entrypoint"
 description: "Demonstrates how to use an entrypoint to run pip install"
-version: "1.1"
 python_script: {
   source: {
     raw: {

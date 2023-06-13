@@ -3,7 +3,6 @@
 
 uuid: "extract_file_from_dir"
 name: "Extract file from dir"
-version: "1.0.1"
 container: {}
 inputs: {
   id: "0"

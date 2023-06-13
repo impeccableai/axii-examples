@@ -13,19 +13,19 @@ sql: {
 }
 outputs: {
   id: "0"
-  name: "output"
+  name: "data"
   data_kind: FS_FILE
   data_hint: STRUCTURED_TEXT
 }
 default_runtime: {
+  new_parameters: {
+    key: "table_name"
+    value: {
+     optional: false
+      value: "table_name"
+    }
+  }
   sql_runtime: {
     no_header: false
-  }
-  new_parameters: {
-    key: "parameter"
-    value: {
-      optional: false
-      value: "value"
-    }
   }
 }

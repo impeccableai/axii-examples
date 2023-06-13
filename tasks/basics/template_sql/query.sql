@@ -1,1 +1,1 @@
-SELECT * FROM table_name WHERE column = {{ parameter }};
+SELECT * FROM .table_name;
