@@ -3,7 +3,8 @@
 
 uuid: "46b5d5eb-925a-43a4-9c88-f94e046e2c7e"
 name: "Preprocess Iris dataset"
-description: "Preprocess Iris Dataset: replaces class names with encoded values [-h] --input INPUT --output OUTPUT\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t--input INPUT\n\t--output OUTPUT"
+description: "This Task preprocesses the Iris dataset by replacing the class names with their corresponding encoded values. It reads the input CSV file using pandas, assigns unique integer IDs to each class, and replaces the class column values with their respective IDs. The modified DataFrame is then written to the output file."
+tags: "iris_dataset"
 version: "1.0.0"
 python_script: {
   source_uuid: "script.py"
