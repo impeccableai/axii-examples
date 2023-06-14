@@ -4,6 +4,7 @@
 uuid: "963c6601-a73c-4b74-acc3-a086ddf09b19"
 name: "Python Task with entrypoint"
 description: "Demonstrates how to use an entrypoint to run pip install"
+tags: "template"
 python_script: {
   source: {
     raw: {

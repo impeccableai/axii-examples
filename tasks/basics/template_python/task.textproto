@@ -4,6 +4,7 @@
 uuid: "fdd0f530-8026-471c-b903-945faa4b23b3"
 name: "Template Python Task"
 description: "This Task can be used as a basic template for your own Python Tasks"
+tags: "template"
 inputs: {
   id: "0"
   name: "input"

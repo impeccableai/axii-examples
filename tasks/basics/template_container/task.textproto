@@ -4,6 +4,7 @@
 uuid: "45b36e2e-fb65-4e2b-84e2-c2f72b664555"
 name: "Template Container Task"
 description: "This Task can be used as a basic template for your own Container Tasks"
+tags: "template"
 inputs: {
   id: "0"
   name: "input"

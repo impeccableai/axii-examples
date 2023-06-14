@@ -4,6 +4,7 @@
 uuid: "3c559c4d-cff3-487e-b7ef-855509c8629a"
 name: "Template Spark Task"
 description: "This Task can be used as a basic template for your own Spark Tasks"
+tags: "template"
 inputs: {
   id: "0"
   name: "input"
