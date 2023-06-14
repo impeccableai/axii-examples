@@ -3,6 +3,7 @@
 
 uuid: "7adea997-c966-4c6e-9b0c-107c531df514"
 name: "Extract file from dir"
+description: "This Task extracts a specified file from a given directory and copies it to a specified output path. The input directory and output file are specified as command line arguments."
 container: {}
 inputs: {
   id: "0"

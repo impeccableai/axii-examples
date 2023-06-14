@@ -3,7 +3,8 @@
 
 uuid: "bd00cb66-f4ad-43db-a19c-2ae278319d9a"
 name: "Titanic - preprocess"
-description: "- adds CabinClass column\n"
+description: "This Task adds a new column named \"CabinClass\" to the input CSV file. The \"CabinClass\" column contains the first character of the \"Cabin\" column, or \"U\" if the \"Cabin\" column is empty. The processed data is written to an output CSV file."
+tags: "titanic_dataset"
 version: "1.0"
 python_script: {
   source: {

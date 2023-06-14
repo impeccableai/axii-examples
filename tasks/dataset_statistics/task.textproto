@@ -3,7 +3,7 @@
 
 uuid: "8d8b109c-a5ae-4356-ad95-e107916b90c5"
 name: "Dataset statistics"
-description: "Compute dataset statistics [-h] -y Y_COLUMN [-d DELIMITER] dataset stats_csv\n\npositional arguments:\n\tdataset\tinput CSV\n\tstats_csv\toutput CSV\n\noptions:\n\t-h, --help\tshow this help message and exit\n\t-y Y_COLUMN, --y_column Y_COLUMN\tground truth column\n\t-d DELIMITER, --delimiter DELIMITER\tcolumn delimiter (default: ',')"
+description: "This Task computes the statistics of a given dataset and saves them to a CSV file. It calculates the count for each unique value in the ground truth column (`y_column`). For each feature column, it computes the minimum, maximum, mean, and median values.\n\nThe input dataset should be in CSV format, and the output is also a CSV file containing the calculated statistics."
 version: "1.1"
 python_script: {
   source: {

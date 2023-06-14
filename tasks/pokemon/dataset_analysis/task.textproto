@@ -1,0 +1,32 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "3527a480-3a1c-4214-bce7-cfc6887e99ed"
+name: "Pokemon Dataset Analysis"
+tags: "pokemon_dataset"
+description: "This Task analyzes the Pokemon dataset and generates bar plots for the counts of Type1, Type2, and their combinations. The Task reads the Pokemon dataset as a CSV file, groups the data by Type1 and Type2, and then creates bar plots for each type and their combinations. The plots are saved as PNG files in the specified output directory."
+python_script: {
+  source: {
+    raw: {
+      source_uuid: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "0"
+  name: "dataset"
+  data_kind: FS_DIR
+}
+outputs: {
+  id: "0"
+  name: "plots"
+  data_kind: FS_DIR
+}
+description: "Basic analysis for Pokemon dataset"
+version: "1.0.5"
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "jupyter/datascience-notebook:latest"
+    command: "python {{ script_path }} {{ dataset }} {{ plots }}"
+  }
+}

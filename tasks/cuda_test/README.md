@@ -1,6 +1,6 @@
 # CUDA Test
 ## Description
-This script checks if CUDA is available and prints the availability status. If CUDA is available, it prints the name of each CUDA device.
+This Task checks if CUDA is available and prints the availability status. If CUDA is available, it prints the name of each CUDA device.
 
 ## Example
 ```

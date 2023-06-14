@@ -1,6 +1,6 @@
 # Failing
 ## Description
-This script writes the numbers 0 to 14, each on a new line, to a specified output file. After writing these numbers, the script raises an exception, simulating a bad situation.
+This Task writes the numbers 0 to 14, each on a new line, to a specified output file. After writing these numbers, the Task raises an exception, simulating a bad situation.
 
 ## Inputs
 None

@@ -2,7 +2,8 @@
 # proto-message: Task
 
 uuid: "f2e4fb74-2eeb-4246-ba2f-659c52ad2b0b"
-name: "reader"
+name: "Reader"
+description: "This Task reads two files containing lists of integers and prints pairs of integers from the two files line by line. It stops when the shorter file is exhausted."
 python_script: {
   source: {
     raw: {

@@ -1,6 +1,6 @@
 # Generator
 ## Description
-This script generates a file with a specified number of lines, where each line contains an integer from 0 to `size-1`. The size of the output file is determined by the "size" parameter. The output file is specified using the "output" flag.
+This Task generates a file with a specified number of lines, where each line contains an integer from 0 to `size-1`. The size of the output file is determined by the "size" parameter. The output file is specified using the "output" flag.
 
 ### Example
 If `size` is 5, the output file will look like this:

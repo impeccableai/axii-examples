@@ -1,6 +1,6 @@
 # Sleep and passthrough
 ## Description
-This script sleeps for a specified amount of time, then copies the content of an input file to an output file. The sleep duration can be set with the "time" parameter.
+This Task sleeps for a specified amount of time, then copies the content of an input file to an output file. The sleep duration can be set with the "time" parameter.
 
 ## Inputs
 - `input` - input file

@@ -3,7 +3,7 @@
 
 uuid: "058f1866-9e91-46b2-92a5-f59bfa7f2b17"
 name: "Label encode column in a CSV file"
-description: "Drop columns from a file [-h] [-d DELIMITER] [-hdr HAS_HEADER] input output column\npositional arguments:\n  input\tinput file\n  output\toutput file\n  column\tcolumn name or idx to encode\n\noptional arguments:\n  -h, --help\tshow this help message and exit\n  -d DELIMITER, --delimiter DELIMITER column delimiter (default: ',')\n  -hdr HAS_HEADER, --has_header HAS_HEADER whether the file has header (default: True)"
+description: "This Task label encodes a specified column in a CSV file. It reads the input file line by line, encodes the specified column, and writes the result to the output file. The encoded column is also saved in a separate file."
 version: "1.1.2"
 parent_uuid: "encode_column"
 python_script: {

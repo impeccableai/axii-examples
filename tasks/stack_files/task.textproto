@@ -3,7 +3,7 @@
 
 uuid: "fede8785-3742-4c35-a54b-dda8ebbbc350"
 name: "Stack files"
-description: "Stack files\nStack files [-h] -o OUTPUT [-d DELIMITER] inputs [inputs ...]\n\npositional arguments:\ninputs\tinput file(s)\n\noptional arguments:\n\t-h, --help\tshow this help message and exit\n\t-o OUTPUT, --out_file OUTPUT\t output file\n\t-d DELIMITER, --delimiter DELIMITER\tdelimiter"
+description: "This Task stacks columns from multiple input files into a single output file. The input files are specified as command line arguments using the \"inputs\" flag. The output file is specified using the \"o\" or \"out_file\" flag. The Task reads every file's contents line by line, and writes them as a single line to the output file."
 version: "1.1"
 python_script: {
   source: {

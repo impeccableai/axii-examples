@@ -3,7 +3,7 @@
 
 uuid: "53e115e3-9f0c-4c86-929e-905a26e62c87"
 name: "Print args"
-description: "Prints args"
+description: "This Task prints the input file names and an additional argument provided as command line inputs. The input files are specified as command line arguments using the \"inputs\" flag. The additional argument is specified using the "arg" flag."
 version: "1.1"
 python_script: {
   source: {

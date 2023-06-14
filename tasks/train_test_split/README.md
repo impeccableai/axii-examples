@@ -1,8 +1,8 @@
 # Split Train/Test sets
 ## Description
-This script randomly splits a CSV file into train and test sets. The input file is specified using the "input" argument. The output train and test set files are specified using the "train_set" and "test_set" arguments. The user can define the size of the test set using "test_size" argument.
+This Task randomly splits a CSV file into train and test sets. The input file is specified using the "input" argument. The output train and test set files are specified using the "train_set" and "test_set" arguments. The user can define the size of the test set using "test_size" argument.
 
-The script uses the random seed to ensure reproducibility. The user can specify the seed using the "--seed" flag. If the CSV file has a header, the script will keep the header in both train and test set files.
+The Task uses the random seed to ensure reproducibility. The user can specify the seed using the "--seed" flag. If the CSV file has a header, the Task will keep the header in both train and test set files.
 
 ## Inputs
 - `input` - input file

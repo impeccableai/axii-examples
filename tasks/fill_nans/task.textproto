@@ -3,7 +3,7 @@
 
 uuid: "555c3c42-01b5-43ff-8834-6767f5a5230b"
 name: "Fill NaNs in column"
-description: "Fill NaNs in column [-h] [--value VALUE] [-d DELIMITER] input_csv output_csv column {mean,max,min,const}\n\npositional arguments:\ninput_csv\tinput CSV\noutput_csv\toutput CSV\ncolumn\tcolumn to fill\n{mean,max,min,const}\tfill mode\n\noptions:\n  -h, --help show this help message and exit\n  --value VALUE const value to fill\n  -d DELIMITER, --delimiter DELIMITER column delimiter (default: ',')"
+description: "This Task fills missing (NaN) values in a specified column of a CSV file. The method of filling can be chosen from the following modes: mean, min, max, or const (constant value). The input and output CSV files are specified as command line arguments, as well as the column to be filled and the mode of filling."
 version: "1.1"
 python_script: {
   source: {

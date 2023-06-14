@@ -1,6 +1,6 @@
 # Hello World
 ## Description
-This script simply prints "Hello World" to the console.
+This Task simply prints "Hello World" to the console.
 
 ## Inputs
 None

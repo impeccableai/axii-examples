@@ -2,7 +2,8 @@
 # proto-message: Task
 
 uuid: "73965517-5a77-4763-b09c-4b545a4e062f"
-name: "connector"
+name: "Connector"
+description: "This Task reads two input files containing numbers, calculates the element-wise sum and difference of the numbers, and saves the results in two separate output files."
 python_script: {
   source: {
     raw: {

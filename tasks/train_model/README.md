@@ -1,6 +1,6 @@
-# Train sklearn model
+# Train Sklearn model
 ## Description
-This script trains a scikit-learn model using either a Decision Tree Classifier or a Gradient Boosting Classifier. It reads a CSV file with training data and saves a trained model to a file.
+This Task trains a scikit-learn model using either a Decision Tree Classifier or a Gradient Boosting Classifier. It reads a CSV file with training data and saves a trained model to a file.
 
 ## Inputs
 - `train_set` - CSV file containing the training data

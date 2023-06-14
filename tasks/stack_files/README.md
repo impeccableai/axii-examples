@@ -1,6 +1,6 @@
 # Stack files
 ## Description
-This script stacks columns from multiple input files into a single output file. The input files are specified as command line arguments using the "inputs" flag. The output file is specified using the "o" or "out_file" flag. The script reads every file's contents line by line, and writes them as a single line to the output file.
+This Task stacks columns from multiple input files into a single output file. The input files are specified as command line arguments using the "inputs" flag. The output file is specified using the "o" or "out_file" flag. The Task reads every file's contents line by line, and writes them as a single line to the output file.
 
 ### Example
 `File 1`:

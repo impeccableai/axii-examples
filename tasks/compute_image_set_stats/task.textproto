@@ -3,6 +3,7 @@
 
 uuid: "0f3723b7-f917-45b7-9060-0eeb4ec16a92"
 name: "Compute image set statistics"
+description: "This Task computes the mean and standard deviation of a set of images. It iterates through the images in the specified directory, converts each image to a numpy array, normalizes the pixel values, and computes the mean and standard deviation using Welford's algorithm."
 python_script: {
   source: {
     raw: {

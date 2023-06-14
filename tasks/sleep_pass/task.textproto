@@ -3,7 +3,7 @@
 
 uuid: "fb9cc6d5-5ebf-42da-ab7d-9aaa2cdef630"
 name: "Sleep and passthrough"
-description: "Sleep for `time` seconds and then copy input to output"
+description: "This Task sleeps for a specified amount of time, then copies the content of an input file to an output file. The sleep duration can be set with the \"time\" parameter."
 version: "1.1"
 python_script: {
   source: {

@@ -3,6 +3,7 @@
 
 uuid: "14af676e-701f-4809-9cbb-9bd435abbef9"
 name: "SQL Query"
+description: "This Task can be used as a basic template for your own SQL Tasks"
 sql: {
   source: {
     raw: {

@@ -1,6 +1,6 @@
 # Sleeper
 ## Description
-This script runs a long-running task that lasts for a specified duration and prints the elapsed time with a step duration. The script sleeps for one second at a time and then prints the elapsed time (in seconds) every step duration.
+This Task runs a long-running task that lasts for a specified duration and prints the elapsed time with a step duration. The Task sleeps for one second at a time and then prints the elapsed time (in seconds) every step duration.
 
 ## Inputs
 _None_

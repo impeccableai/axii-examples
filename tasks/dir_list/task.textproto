@@ -2,7 +2,8 @@
 # proto-message: Task
 
 uuid: "2890a481-372c-4053-a635-a420905b3f1e"
-name: "dir list"
+name: "Dir list"
+description: "This Task lists file names in a directory and writes them to an output file. The input directory is specified using the \"dir\" flag, and the output file is specified using the \"output\" flag."
 python_script: {
   source: {
     raw: {

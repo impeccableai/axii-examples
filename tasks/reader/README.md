@@ -1,6 +1,6 @@
 # Reader
 ## Description
-This script reads two files containing lists of integers and prints pairs of integers from the two files line by line. It stops when the shorter file is exhausted.
+This Task reads two files containing lists of integers and prints pairs of integers from the two files line by line. It stops when the shorter file is exhausted.
 
 ### Example
 `File A`:

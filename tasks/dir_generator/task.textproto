@@ -2,7 +2,8 @@
 # proto-message: Task
 
 uuid: "786b300c-c8bb-4fae-9a5b-e0f630c42125"
-name: "dir generator"
+name: "Dir generator"
+description: "This script generates a directory with a specified number of files. Each file contains a single line with a test message and an index. The output directory is specified using the --output flag, and the number of files can be set with the --count flag."
 python_script: {
   source: {
     raw: {

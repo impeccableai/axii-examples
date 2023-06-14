@@ -1,6 +1,6 @@
 # Fill NaNs in column
 ## Description
-This script fills missing (NaN) values in a specified column of a CSV file. The method of filling can be chosen from the following modes: mean, min, max, or const (constant value). The input and output CSV files are specified as command line arguments, as well as the column to be filled and the mode of filling.
+This Task fills missing (NaN) values in a specified column of a CSV file. The method of filling can be chosen from the following modes: mean, min, max, or const (constant value). The input and output CSV files are specified as command line arguments, as well as the column to be filled and the mode of filling.
 
 ### Example
 `Input`:

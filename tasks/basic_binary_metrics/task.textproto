@@ -3,7 +3,7 @@
 
 uuid: "a2e37360-61b4-416d-8fe4-a749d861a44d"
 name: "Basic metrics"
-description: "Compute basic metrics for binary classification task [-h] -p PROB_COLUMN -y Y_COLUMN [-d DELIMITER] dataset metrics_csv\n\npositional arguments:\ndataset\tinput CSV\nmetrics_csv\toutput CSV\n\noptions:\n-h, --help\tshow this help message and exit\n-p PROB_COLUMN, --prob_column PROB_COLUMN\tprobability column\n-y Y_COLUMN, --y_column Y_COLUMN\tground truth column\n-d DELIMITER, --delimiter DELIMITER\tcolumn delimiter (default: ',')"
+description: "This Task calculates basic metrics (Precision, Recall, F1, and Accuracy) for binary classification tasks based on input CSV data. The Task reads the input CSV using pandas and calculates the metrics based on the probability column and ground truth column provided by the user."
 version: "1.2"
 python_script: {
   source: {

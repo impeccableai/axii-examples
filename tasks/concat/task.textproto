@@ -3,7 +3,7 @@
 
 uuid: "010fde64-193a-47cb-b328-c685cd37c897"
 name: "Concat files"
-description: "Concat files\nusage: Concat files [-h] -o OUTPUT inputs [inputs ...]\n\npositional arguments:\ninputs: input file(s)\n\noptional arguments:\n-h, --help how this help message and exit\n-o OUTPUT, --out_file OUTPUT output file"
+description: "This Task concatenates multiple input files into a single output file. The input files are specified as command line arguments using the \"inputs\" flag. The output file is specified using the \"o\" or \"out_file\" flag. The Task reads every file's contents line by line and writes them to the output file."
 version: "1.0"
 python_script: {
   source: {

@@ -1,0 +1,36 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "0a255786-25c4-4795-9c44-cc5c8ae735ec"
+name: "Pokemon Data Split"
+description: "This Task copies the \"images\" folder and the \"pokemon.csv\" file from a dataset folder to new specified locations."
+tags: "pokemon_dataset"
+python_script: {
+  source: {
+    raw: {
+      source_uuid: "script.py"
+      source_name: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "a"
+  name: "dataset"
+  data_kind: FS_DIR
+}
+outputs: {
+  id: "b"
+  name: "images"
+  data_kind: FS_DIR
+}
+outputs: {
+  id: "c"
+  name: "csv"
+  data_kind: FS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:alpine"
+    command: "python {{ script_path }}"
+  }
+}

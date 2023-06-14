@@ -2,7 +2,8 @@
 # proto-message: Task
 
 uuid: "d8daff2a-d3b1-47b4-82cf-14ba7dfe11df"
-name: "cuda test"
+name: "Cuda test"
+description: "This Task checks if CUDA is available and prints the availability status. If CUDA is available, it prints the name of each CUDA device."
 nondeterministic: true
 python_script: {
   source: {

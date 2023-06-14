@@ -2,7 +2,8 @@
 # proto-message: Task
 
 uuid: "dd61fd51-d274-443b-b62b-34e17c511df3"
-name: "counter"
+name: "Counter"
+description: "This script counts the number of lines in an input file and prints the count. The input file is specified as a command line argument using the \"input\" flag."
 python_script: {
   source: {
     raw: {

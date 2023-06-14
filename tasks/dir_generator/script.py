@@ -1,10 +1,4 @@
 import argparse
-from urllib.parse import urlparse
-
-
-def parse_s3_path(s3_path):
-    o = urlparse(s3_path)
-    return o.netloc, o.path
 
 
 def main(args):

@@ -1,6 +1,6 @@
 # Container Template Task
 ## Description
-This script does nothing, but can be used as a template for creating your own Container Tasks.
+This Task does nothing, but can be used as a template for creating your own Container Tasks.
 
 ## Inputs
 - `input` - input file

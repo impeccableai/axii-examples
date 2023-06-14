@@ -1,6 +1,6 @@
 # Python Task with entrypoint
 ## Description
-This script demonstrates how to use an entrypoint to run `pip install` inside a Docker container and then execute the `script.py`.
+This Task demonstrates how to use an entrypoint to run `pip install` inside a Docker container and then execute the `script.py`.
 
 ## Parameters
 - `arg` - argument to be passed to the `script.py`

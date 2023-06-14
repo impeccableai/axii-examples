@@ -1,6 +1,6 @@
 # Classification Metrics
 ## Description
-This script computes metrics for classification tasks, such as precision, recall, F1 score, and accuracy. It reads a dataset in CSV format and calculates these metrics for each unique class in the dataset. The results are written to an output CSV file.
+This Task computes metrics for classification tasks, such as precision, recall, F1 score, and accuracy. It reads a dataset in CSV format and calculates these metrics for each unique class in the dataset. The results are written to an output CSV file.
 
 ## Inputs
 - `dataset` - input CSV file containing classification results

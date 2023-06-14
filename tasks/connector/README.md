@@ -1,6 +1,6 @@
 # Connector
 ## Description
-This script reads two input files containing numbers, calculates the element-wise sum and difference of the numbers, and saves the results in two separate output files.
+This Task reads two input files containing numbers, calculates the element-wise sum and difference of the numbers, and saves the results in two separate output files.
 
 ## Inputs
 - `fib` - first input file containing numbers

@@ -3,6 +3,7 @@
 
 uuid: "12877024-280b-44d9-a7c3-1a025380a1b1"
 name: "Random Python"
+description: "This Task generates a random integer between 0 and 100 and writes it to an output file. The output file is specified using the `--output` flag. The `--seed` flag allows setting a seed for reproducible random numbers."
 nondeterministic: true
 python_script: {
   source: {

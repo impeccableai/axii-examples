@@ -1,6 +1,6 @@
 # Dataset statistics
 ## Description
-This script computes the statistics of a given dataset and saves them to a CSV file. It calculates the count for each unique value in the ground truth column (`y_column`). For each feature column, it computes the minimum, maximum, mean, and median values.
+This Task computes the statistics of a given dataset and saves them to a CSV file. It calculates the count for each unique value in the ground truth column (`y_column`). For each feature column, it computes the minimum, maximum, mean, and median values.
 
 The input dataset should be in CSV format, and the output is also a CSV file containing the calculated statistics.
 

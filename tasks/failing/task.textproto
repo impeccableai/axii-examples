@@ -2,7 +2,8 @@
 # proto-message: Task
 
 uuid: "3291980b-4165-4534-946a-8624361a3ae1"
-name: "failing"
+name: "Failing"
+description: "This Task writes the numbers 0 to 14, each on a new line, to a specified output file. After writing these numbers, the Task raises an exception, simulating a bad situation."
 python_script: {
   source: {
     raw: {

@@ -1,6 +1,6 @@
 # Drop columns from CSV file
 ## Description
-This script removes specified columns from a CSV file. The input file is specified with the `--input` flag, and the output file is specified with the `--output` flag. The columns to be removed can be specified by their indices or names using the `--drop_columns` flag. The delimiter and whether the file has a header or not can also be specified.
+This Task removes specified columns from a CSV file. The input file is specified with the `--input` flag, and the output file is specified with the `--output` flag. The columns to be removed can be specified by their indices or names using the `--drop_columns` flag. The delimiter and whether the file has a header or not can also be specified.
 
 ### Example
 `Input`:

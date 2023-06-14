@@ -1,0 +1,26 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "93ef7284-6b76-40ca-80cd-53ca60cce744"
+name: "GCS Generator"
+description: "This Task generates a sequence of integers from 0 to 14 and uploads it to a Google Cloud Storage (GCS) bucket specified by the `--output` argument. The Task uses the Google Cloud Storage Client library to interact with GCS."
+tags: "gcs"
+python_script: {
+  source: {
+    raw: {
+      source_uuid: "source"
+      source_name: "script.py"
+    }
+  }
+}
+outputs: {
+  id: "a"
+  name: "output"
+  data_kind: GCS_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "python:latest"
+    command: "{{ script_path }}/entrypoint.sh {{ script_path }}"
+  }
+}

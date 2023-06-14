@@ -1,6 +1,6 @@
 # Extract file from dir
 ## Description
-This script extracts a specified file from a given directory and copies it to a specified output path. The input directory and output file are specified as command line arguments.
+This Task extracts a specified file from a given directory and copies it to a specified output path. The input directory and output file are specified as command line arguments.
 
 ## Inputs
 - `dir` - input directory

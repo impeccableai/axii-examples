@@ -1,6 +1,6 @@
 # Random Python
 ## Description
-This script generates a random integer between 0 and 100 and writes it to an output file. The output file is specified using the `--output` flag. The `--seed` flag allows setting a seed for reproducible random numbers.
+This Task generates a random integer between 0 and 100 and writes it to an output file. The output file is specified using the `--output` flag. The `--seed` flag allows setting a seed for reproducible random numbers.
 
 ## Outputs
 - `output` - output file with a random integer

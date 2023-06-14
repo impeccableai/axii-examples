@@ -2,7 +2,8 @@
 # proto-message: Task
 
 uuid: "5bfcb6d9-e837-4e39-a726-07d466096b4c"
-name: "generator"
+name: "Generator"
+description: "This Task generates a file with a specified number of lines, where each line contains an integer from 0 to `size-1`. The size of the output file is determined by the \"size\" parameter. The output file is specified using the \"output\" flag."
 version: "1.1"
 python_script: {
   source: {

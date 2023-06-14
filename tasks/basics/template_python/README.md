@@ -1,6 +1,6 @@
 # Python Template Task
 ## Description
-This script does nothing, but can be used as a template for creating your own Python Tasks.
+This Task does nothing, but can be used as a template for creating your own Python Tasks.
 
 ## Inputs
 - `input` - input file

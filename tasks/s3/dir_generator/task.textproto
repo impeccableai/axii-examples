@@ -1,0 +1,51 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "468c3541-d47d-49b5-a390-b16bfc080d08"
+name: "S3 Dir Generator"
+description: "This Task generates multiple files with a specified number of lines and uploads them to an S3 bucket. The output S3 path is specified using the `--output` flag. The Task loops through the range of the `count` parameter and creates an S3 object for each file with the line content."
+tags: "s3"
+python_script: {
+  source: {
+    raw: {
+      source_uuid: "source"
+      source_name: "script.py"
+    }
+  }
+}
+outputs: {
+  id: "a"
+  name: "output"
+  data_kind: S3_DIR
+}
+default_runtime: {
+  new_parameters: {
+    key: "count"
+    value: {
+      optional: true
+      value: "10"
+    }
+  }
+  new_environment_variables: {
+    key: "S3_HOST"
+    value: {
+      raw: "s3_host"
+    }
+  }
+  new_environment_variables: {
+    key: "S3_ACCESS_KEY"
+    value: {
+      raw: "s3_access_key"
+    }
+  }
+  new_environment_variables: {
+    key: "S3_SECRET_KEY"
+    value: {
+      raw: "s3_secret_key"
+    }
+  }
+  python_script_runtime: {
+    docker_image: "wookeshi/boto3:alpine"
+    command: "{{ script_path }}/entrypoint.sh {{ script_path }}"
+  }
+}

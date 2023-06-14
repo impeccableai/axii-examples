@@ -3,8 +3,9 @@
 
 uuid: "7bb7c4c0-80c3-45db-a6e9-d0b934263314"
 name: "Tensorboard test"
-description: ""
+description: "This Task demonstrates the use of Tensorboard by logging the sine function values for 100 steps. If a logging directory is provided, the Task will create a Tensorboard file writer and log the sine values. Additionally, it writes a string \"so ML, much AI\" to the output model file."
 version: "1.0"
+tags: "tensorflow"
 python_script: {
   source: {
     raw: {

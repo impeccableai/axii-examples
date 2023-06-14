@@ -1,6 +1,6 @@
 # Basic Metrics
 ## Description
-This script calculates basic metrics (Precision, Recall, F1, and Accuracy) for binary classification tasks based on input CSV data. The script reads the input CSV using pandas and calculates the metrics based on the probability column and ground truth column provided by the user.
+This Task calculates basic metrics (Precision, Recall, F1, and Accuracy) for binary classification tasks based on input CSV data. The Task reads the input CSV using pandas and calculates the metrics based on the probability column and ground truth column provided by the user.
 
 ## Inputs
 - `dataset` - input CSV file

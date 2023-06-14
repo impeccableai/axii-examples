@@ -1,0 +1,27 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "26d35b8f-83d7-48fe-bf7c-bec81bba07e8"
+name: "S3 Reader"
+description: "This Task reads a file from Amazon S3 storage. The input file is specified as a command line argument using the "input" flag."
+tags: "s3"
+python_script: {
+  source: {
+    raw: {
+      source_uuid: "source"
+      source_name: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "a"
+  name: "input"
+  data_hint: DATA_HINT_NONE
+  data_kind: S3_FILE
+}
+default_runtime: {
+  python_script_runtime: {
+    docker_image: "wookeshi/boto3:alpine"
+    command: "{{ script_path }}/entrypoint.sh {{ script_path }}"
+  }
+}

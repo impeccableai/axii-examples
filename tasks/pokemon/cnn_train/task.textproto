@@ -1,0 +1,95 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "82c77d6a-9776-4c8d-935f-d23847dc6102"
+name: "Pokemon model CNN training/inference [PyTorch]"
+description: "This Task trains a Convolutional Neural Network (CNN) on the Pokemon dataset using PyTorch. The Task supports both training and inference modes, which can be specified by the `--mode` option."
+version: "1.1.0"
+tags: "pytorch"
+tags: "pokemon_dataset"
+python_script: {
+  source: {
+    raw: {
+      source_uuid: "train.py"
+    }
+  }
+}
+inputs: {
+  id: "0"
+  name: "pokemon_stats_file"
+  data_hint: TEXT
+  data_kind: FS_FILE
+}
+inputs: {
+  id: "1"
+  name: "pokemon_csv"
+  data_hint: STRUCTURED_TEXT
+  data_kind: FS_FILE
+}
+inputs: {
+  id: "2"
+  name: "dataset"
+  data_hint: IMAGE
+  data_kind: FS_DIR
+}
+inputs: {
+  id: "3"
+  name: "saved_model"
+  data_hint: BINARY
+  data_kind: FS_FILE
+  optional: true
+}
+outputs: {
+  id: "0"
+  name: "trained_model"
+  data_hint: BINARY
+  data_kind: FS_FILE
+}
+default_runtime: {
+  new_parameters: {
+    key: "batch_size"
+    value: {
+      optional: false
+      value: "4"
+    }
+  }
+  new_parameters: {
+    key: "epochs"
+    value: {
+      optional: false
+      value: "10"
+    }
+  }
+  new_parameters: {
+    key: "learning_rate"
+    value: {
+      optional: false
+      value: "0.001"
+    }
+  }
+  new_parameters: {
+    key: "mode"
+    value: {
+      optional: false
+      value: "training"
+    }
+  }
+  new_parameters: {
+    key: "num_classes"
+    value: {
+      optional: false
+      value: "-1"
+    }
+  }
+  new_parameters: {
+    key: "random_seed"
+    value: {
+      optional: false
+      value: "42"
+    }
+  }
+  python_script_runtime: {
+    docker_image: "pytorch/pytorch:1.12.0-cuda11.3-cudnn8-runtime"
+    command: "sh {{ script_path }}/entrypoint.sh --arg={{ arg }}"
+  }
+}

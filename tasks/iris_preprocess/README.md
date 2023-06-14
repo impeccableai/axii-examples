@@ -1,6 +1,6 @@
 # Preprocess Iris dataset
 ## Description
-This script preprocesses the Iris dataset by replacing the class names with their corresponding encoded values. It reads the input CSV file using pandas, assigns unique integer IDs to each class, and replaces the class column values with their respective IDs. The modified DataFrame is then written to the output file.
+This Task preprocesses the Iris dataset by replacing the class names with their corresponding encoded values. It reads the input CSV file using pandas, assigns unique integer IDs to each class, and replaces the class column values with their respective IDs. The modified DataFrame is then written to the output file.
 
 ### Example
 `Input`:

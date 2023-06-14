@@ -1,6 +1,6 @@
 # Compute image set statistics
 ## Description
-This script computes the mean and standard deviation of a set of images. It iterates through the images in the specified directory, converts each image to a numpy array, normalizes the pixel values, and computes the mean and standard deviation using Welford's algorithm.
+This Task computes the mean and standard deviation of a set of images. It iterates through the images in the specified directory, converts each image to a numpy array, normalizes the pixel values, and computes the mean and standard deviation using Welford's algorithm.
 
 ## Inputs
 - `images` - directory containing the images

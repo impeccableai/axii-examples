@@ -1,6 +1,6 @@
 # Run sklearn model
 ## Description
-This script loads a trained scikit-learn model and runs it on a CSV dataset file to produce predictions. The model is loaded using the `joblib` library, and the dataset is read using the `pandas` library. The predictions are then saved into a new CSV file.
+This Task loads a trained scikit-learn model and runs it on a CSV dataset file to produce predictions. The model is loaded using the `joblib` library, and the dataset is read using the `pandas` library. The predictions are then saved into a new CSV file.
 
 ### Example
 `trained_model`: sklearn model file

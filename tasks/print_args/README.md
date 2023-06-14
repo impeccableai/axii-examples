@@ -1,6 +1,6 @@
 # Print args
 ## Description
-This script prints the input file names and an additional argument provided as command line inputs. The input files are specified as command line arguments using the "inputs" flag. The additional argument is specified using the "arg" flag.
+This Task prints the input file names and an additional argument provided as command line inputs. The input files are specified as command line arguments using the "inputs" flag. The additional argument is specified using the "arg" flag.
 
 ## Inputs
 - `inputs` - input files

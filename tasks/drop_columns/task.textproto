@@ -3,7 +3,7 @@
 
 uuid: "d38f9ce0-2789-4b55-9261-11c18bc59d9c"
 name: "Drop columns from CSV file"
-description: "Drop columns from a file [-h]\nUsage: drop_columns.py --input INPUT --output OUTPUT --drop_columns DROP_COLUMNS [-d DELIMITER] [-hdr HAS_HEADER]\n\noptional arguments:\n  -h, --help show this help message and exit\n  --input INPUT input file\n  --output OUTPUT output file\n  --drop_columns DROP_COLUMNS comma separated list of column names or indices to drop\n  -d DELIMITER, --delimiter DELIMITER column delimiter (default: ',')\n  -hdr HAS_HEADER, --has_header HAS_HEADER whether the file has header (default: True"
+description: "This Task removes specified columns from a CSV file. The input file is specified with the `--input` flag, and the output file is specified with the `--output` flag. The columns to be removed can be specified by their indices or names using the `--drop_columns` flag. The delimiter and whether the file has a header or not can also be specified."
 version: "1.1"
 python_script: {
   source: {

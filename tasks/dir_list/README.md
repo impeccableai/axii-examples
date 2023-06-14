@@ -1,6 +1,6 @@
 # Dir List
 ## Description
-This script lists file names in a directory and writes them to an output file. The input directory is specified using the "dir" flag, and the output file is specified using the "output" flag.
+This Task lists file names in a directory and writes them to an output file. The input directory is specified using the "dir" flag, and the output file is specified using the "output" flag.
 
 ### Example
 `Input Directory`:

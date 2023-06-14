@@ -1,6 +1,6 @@
 # Label encode column in a CSV file
 ## Description
-This script label encodes a specified column in a CSV file. It reads the input file line by line, encodes the specified column, and writes the result to the output file. The encoded column is also saved in a separate file.
+This Task label encodes a specified column in a CSV file. It reads the input file line by line, encodes the specified column, and writes the result to the output file. The encoded column is also saved in a separate file.
 
 ### Example
 `Input`:

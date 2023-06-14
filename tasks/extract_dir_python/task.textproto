@@ -1,0 +1,37 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "b94ce6d0-2d5b-415f-8d07-cea7997ce54e"
+name: "Extract dir [Python]"
+description: "This Task copies all files from a specified subdirectory within the input directory to the output directory. The subdirectory name can be specified as an optional argument."
+version: "1.1"
+python_script: {
+  source: {
+    raw: {
+      source_uuid: "script.py"
+    }
+  }
+}
+inputs: {
+  id: "0"
+  name: "in_dir"
+  data_kind: FS_DIR
+}
+outputs: {
+  id: "0"
+  name: "out"
+  data_kind: FS_DIR
+}
+default_runtime: {
+  new_parameters: {
+    key: "name"
+    value: {
+      optional: true
+      value: ""
+      }
+  }
+  python_script_runtime: {
+    docker_image: "python:latest"
+    command: "python {{ script_path }} {{ in_dir }} {{ out }}"
+  }
+}

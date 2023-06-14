@@ -1,0 +1,44 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: Task
+
+uuid: "fe3e1e2f-d6a0-45ba-a11a-6677fcaba2fb"
+name: "S3 Generator"
+description: "This Task generates a text file with numbers from 0 to 14 and uploads it to an S3-compatible storage service. The output file location is specified as a command line argument using the \"output\" flag. The Task uses the `boto3` library to interact with S3 and requires the `S3_HOST`, `S3_ACCESS_KEY`, and `S3_SECRET_KEY` environment variables to be set."
+tags: "s3"
+python_script: {
+  source: {
+    raw: {
+      source_uuid: "source"
+      source_name: "script.py"
+    }
+  }
+}
+outputs: {
+  id: "a"
+  name: "output"
+  data_kind: S3_FILE
+}
+default_runtime: {
+  new_environment_variables: {
+    key: "S3_HOST"
+    value: {
+      raw: "s3_host"
+    }
+  }
+  new_environment_variables: {
+    key: "S3_ACCESS_KEY"
+    value: {
+      raw: "s3_access_key"
+    }
+  }
+  new_environment_variables: {
+    key: "S3_SECRET_KEY"
+    value: {
+      raw: "s3_secret_key"
+    }
+  }
+  python_script_runtime: {
+    docker_image: "wookeshi/boto3:alpine"
+    command: "{{ script_path }}/entrypoint.sh {{ script_path }}"
+  }
+}

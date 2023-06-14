@@ -1,6 +1,6 @@
 # Tensorboard test
 ## Description
-This script demonstrates the use of Tensorboard by logging the sine function values for 100 steps. If a logging directory is provided, the script will create a Tensorboard file writer and log the sine values. Additionally, it writes a string "so ML, much AI" to the output model file.
+This Task demonstrates the use of Tensorboard by logging the sine function values for 100 steps. If a logging directory is provided, the Task will create a Tensorboard file writer and log the sine values. Additionally, it writes a string "so ML, much AI" to the output model file.
 
 ## Inputs
 None

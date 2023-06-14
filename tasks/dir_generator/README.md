@@ -1,6 +1,6 @@
 # Dir generator
 ## Description
-This script generates a directory with a specified number of files. Each file contains a single line with a test message and an index. The output directory is specified using the `--output` flag, and the number of files can be set with the `--count` flag.
+This Task generates a directory with a specified number of files. Each file contains a single line with a test message and an index. The output directory is specified using the `--output` flag, and the number of files can be set with the `--count` flag.
 
 ### Example
 `Output`:
