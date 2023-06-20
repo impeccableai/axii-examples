@@ -6,7 +6,7 @@ workflow: {
   nodes: {
     uuid: "a"
     task: {
-      uuid: "../../tasks/generator"
+      uuid: "../../../tasks/generator/"
     }
     runtime: {
       python_script_runtime: {
@@ -22,7 +22,7 @@ workflow: {
   nodes: {
     uuid: "b"
     task: {
-      uuid: "../../tasks/reader"
+      uuid: "../../../tasks/reader"
     }
     runtime: {
       python_script_runtime: {
