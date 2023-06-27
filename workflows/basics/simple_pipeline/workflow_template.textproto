@@ -1,7 +1,7 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: WorkflowTemplate
 
-uuid: "simple_python_pipeline"
+uuid: "a2217e29-80cd-4f3d-b47e-a87559e8b5a6"
 workflow: {
   nodes: {
     uuid: "a"
