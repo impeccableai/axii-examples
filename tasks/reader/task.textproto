@@ -1,9 +1,9 @@
 # proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
 # proto-message: Task
 
-uuid: "f2e4fb74-2eeb-4246-ba2f-659c52ad2b0b"
+uuid: "21408e97-ce77-491f-82e4-675e1b541010"
 name: "Reader"
-description: "This Task reads two files containing lists of integers and prints pairs of integers from the two files line by line. It stops when the shorter file is exhausted."
+description: "This Task reads input file line by line and prints it's content to standard output."
 python_script: {
   source: {
     raw: {
@@ -14,17 +14,12 @@ python_script: {
 }
 inputs: {
   id: "da"
-  name: "a"
-  data_kind: FS_FILE
-}
-inputs: {
-  id: "db"
-  name: "b"
+  name: "file"
   data_kind: FS_FILE
 }
 default_runtime: {
   python_script_runtime: {
     docker_image: "python:alpine"
-    command: "python {{ script_path }}"
+    command: "python {{ script_path }} {{ file }}"
   }
 }

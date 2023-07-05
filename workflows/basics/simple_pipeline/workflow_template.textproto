@@ -1,0 +1,44 @@
+# proto-file: github.com/impeccableai/impeccable/proto/workflow/workflow.proto
+# proto-message: WorkflowTemplate
+
+uuid: "a2217e29-80cd-4f3d-b47e-a87559e8b5a6"
+workflow: {
+  nodes: {
+    uuid: "a"
+    task: {
+      uuid: "../../../tasks/generator/"
+    }
+    runtime: {
+      python_script_runtime: {
+        docker_image: "python:alpine"
+        command: "python {{ script_path }}"
+      }
+    }
+    ui_data: {
+      x: 0
+      y: 0
+    }
+  }
+  nodes: {
+    uuid: "b"
+    task: {
+      uuid: "../../../tasks/reader"
+    }
+    runtime: {
+      python_script_runtime: {
+        docker_image: "python:alpine"
+        command: "python {{ script_path }}"
+      }
+    }
+    ui_data: {
+      x: 300
+      y: 0
+    }
+  }
+  edges: {
+    src_uuid: "a"
+    src_output_id: "aa"
+    dst_uuid: "b"
+    dst_input_id: "da"
+  }
+}
