@@ -39,6 +39,6 @@ workflow: {
     src_uuid: "a"
     src_output_id: "aa"
     dst_uuid: "b"
-    dst_input_id: "bb"
+    dst_input_id: "da"
   }
 }
