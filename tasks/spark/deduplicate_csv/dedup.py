@@ -9,8 +9,7 @@ def main(args):
     dataframe = sc.read.option("header", "true").option(
         "mode", "DROPMALFORMED").csv(args.input)
     dataframe_dropdup = dataframe.dropDuplicates()
-    dataframe_dropdup.coalesce(1).writemode('overwrite').option(
-        "header", "true").csv(args.output)
+    dataframe_dropdup.coalesce(1).write.csv(args.output, mode="overwrite", header=True)
     sc.stop()
 
 
